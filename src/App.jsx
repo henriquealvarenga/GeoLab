@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { PlayerProvider, usePlayer } from './context/PlayerContext';
 import Navbar from './components/Layout/Navbar';
 import StarBackground from './components/Layout/StarBackground';
@@ -43,10 +43,10 @@ function AppRoutes() {
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <PlayerProvider>
         <AppRoutes />
       </PlayerProvider>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
