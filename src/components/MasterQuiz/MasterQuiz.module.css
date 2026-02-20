@@ -1,0 +1,279 @@
+.container {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Intro */
+.introCard {
+  text-align: center;
+  padding: 2.5rem 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  border-radius: 20px;
+}
+
+:global([data-theme="light"]) .introCard {
+  background: rgba(255, 255, 255, 0.8);
+  border-color: rgba(255, 215, 0, 0.3);
+}
+
+.trophy { font-size: 3.5rem; margin-bottom: 0.5rem; }
+
+.introCard h1 {
+  color: #FFD54F;
+  font-size: 1.8rem;
+  margin: 0 0 0.5rem;
+}
+
+.introDesc {
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 380px;
+  margin: 0 auto 1.5rem;
+  line-height: 1.5;
+}
+
+.introDesc strong { color: #FFD54F; }
+
+:global([data-theme="light"]) .introDesc { color: rgba(0, 0, 0, 0.5); }
+:global([data-theme="light"]) .introDesc strong { color: #F57F17; }
+
+.locked {
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.progress { color: #4FC3F7; font-weight: 600; }
+
+.reward {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-bottom: 1.5rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Quiz card - same as regular quiz */
+.quizCard {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 215, 0, 0.15);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+:global([data-theme="light"]) .quizCard {
+  background: rgba(255, 255, 255, 0.8);
+  border-color: rgba(255, 215, 0, 0.2);
+}
+
+.quizProgress { height: 4px; background: rgba(255, 255, 255, 0.05); }
+
+.quizProgressFill {
+  height: 100%;
+  background: linear-gradient(90deg, #FFD54F, #FF8F00);
+  border-radius: 0 2px 2px 0;
+  transition: width 0.4s ease;
+}
+
+.quizHeader {
+  padding: 1rem 1.5rem 0;
+  font-size: 0.8rem;
+  color: #FFD54F;
+  font-weight: 600;
+}
+
+.question {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.4;
+}
+
+:global([data-theme="light"]) .question { color: #1a1a2e; }
+
+.options {
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem 1rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 2px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: left;
+}
+
+.option:hover:not(:disabled) {
+  border-color: rgba(255, 215, 0, 0.3);
+}
+
+:global([data-theme="light"]) .option {
+  background: rgba(0, 0, 0, 0.02);
+  border-color: rgba(0, 0, 0, 0.08);
+  color: rgba(0, 0, 0, 0.75);
+}
+
+.option.selected {
+  border-color: #FFD54F;
+  background: rgba(255, 213, 79, 0.1);
+}
+
+.option.correct {
+  border-color: #81C784;
+  background: rgba(129, 199, 132, 0.15);
+  color: #81C784;
+}
+
+.option.wrong {
+  border-color: #EF5350;
+  background: rgba(239, 83, 80, 0.1);
+  color: #EF5350;
+}
+
+.optLetter {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.8rem;
+  flex-shrink: 0;
+}
+
+.explanation {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  margin: 1rem 1.5rem;
+  padding: 0.85rem 1rem;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 12px;
+}
+
+.explanation p {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.4;
+  margin: 0;
+}
+
+:global([data-theme="light"]) .explanation p { color: rgba(0, 0, 0, 0.6); }
+
+.quizNav {
+  padding: 1rem 1.5rem 1.5rem;
+  text-align: center;
+}
+
+/* Result */
+.resultCard {
+  text-align: center;
+  padding: 2.5rem 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  border-radius: 20px;
+}
+
+:global([data-theme="light"]) .resultCard {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.resultEmoji {
+  font-size: 3.5rem;
+  animation: bounce 0.6s ease;
+}
+
+@keyframes bounce {
+  0% { transform: scale(0); }
+  50% { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+
+.resultCard h1 { color: #FFD54F; margin: 0.5rem 0; }
+
+.scoreDisplay {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.scoreNum { font-size: 3.5rem; font-weight: 800; color: #FFD54F; }
+.scoreTotal { font-size: 1.5rem; color: rgba(255, 255, 255, 0.4); }
+
+.xpGain { font-size: 1.2rem; font-weight: 700; color: #81C784; }
+
+.passMsg { color: rgba(255, 255, 255, 0.6); max-width: 350px; margin: 0.5rem auto; }
+.failMsg { color: rgba(255, 255, 255, 0.5); max-width: 350px; margin: 0.5rem auto; }
+
+:global([data-theme="light"]) .passMsg { color: rgba(0, 0, 0, 0.5); }
+:global([data-theme="light"]) .failMsg { color: rgba(0, 0, 0, 0.45); }
+
+.resultBtns {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* Buttons */
+.btn {
+  padding: 0.75rem 2rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #FFD54F, #FF8F00);
+  color: #1a1a2e;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(255, 213, 79, 0.3);
+}
+
+.btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.btnSecondary {
+  padding: 0.75rem 2rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.btnSecondary:hover { border-color: rgba(255, 255, 255, 0.3); }
+
+:global([data-theme="light"]) .btnSecondary {
+  border-color: rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.55);
+}

@@ -1,0 +1,68 @@
+const stories = [
+  {
+    id: 1,
+    title: 'Eratóstenes e a Medição da Terra',
+    emoji: '📏',
+    color: '#FFD54F',
+    period: '240 a.C.',
+    location: 'Alexandria, Egito',
+    coordinates: '31.2°N, 29.9°E',
+    paragraphs: [
+      'Há mais de 2.200 anos, um homem chamado **Eratóstenes** fez algo que ninguém achava possível: mediu o tamanho da Terra inteira usando apenas um poço, um pau e matemática!',
+      'Eratóstenes era o bibliotecário-chefe da famosa **Biblioteca de Alexandria**, no Egito. Um dia, ele leu que na cidade de **Siena** (hoje Assuã), no solstício de verão, o Sol ficava exatamente no topo do céu ao meio-dia — tão reto que iluminava o fundo de um poço sem fazer sombra.',
+      'Curioso, ele mediu a sombra de um pau em Alexandria no mesmo dia e horário. A sombra formava um ângulo de **7,2°** — exatamente **1/50 de um círculo completo** (360°).',
+      'Ele já sabia que a distância entre Alexandria e Siena era de cerca de **5.000 estádios** (aproximadamente 800 km). Então fez a conta: se 7,2° corresponde a 800 km, 360° corresponde a... **40.000 km**!',
+      'O resultado real da circunferência da Terra é de cerca de **40.075 km**. Eratóstenes acertou com uma precisão impressionante, usando apenas geometria e observação! Ele é considerado o **pai da Geografia** e foi o primeiro a usar o conceito de **latitude e longitude** em mapas.',
+    ],
+  },
+  {
+    id: 2,
+    title: 'Harrison e o Relógio que Salvou Vidas',
+    emoji: '⏱️',
+    color: '#4FC3F7',
+    period: 'Século XVIII',
+    location: 'Inglaterra',
+    coordinates: '51.5°N, 0.1°W',
+    paragraphs: [
+      'Por séculos, navegar pelo oceano era um jogo mortal de adivinhação. Os marinheiros conseguiam determinar a **latitude** olhando as estrelas, mas a **longitude** era um mistério. Milhares morriam em naufrágios por não saberem exatamente onde estavam.',
+      'Em 1714, o governo britânico ofereceu um prêmio gigantesco: **£20.000** (equivalente a milhões hoje) para quem resolvesse o "Problema da Longitude".',
+      'Cientistas e astrônomos tentaram soluções com as estrelas, mas um simples **carpinteiro chamado John Harrison** teve uma ideia brilhante: construir um **relógio tão preciso** que funcionasse perfeitamente em alto-mar.',
+      'A lógica era genial: se você sabe que horas são em Greenwich (pelo relógio) e sabe que horas são onde você está (pelo Sol), a diferença te diz a longitude. Cada hora de diferença = 15° de longitude!',
+      'Harrison passou **40 anos** construindo 4 versões de seu cronômetro marinho. O **H4**, do tamanho de um relógio de bolso grande, perdeu apenas **5 segundos** em uma viagem de 81 dias para a Jamaica! Ele revolucionou a navegação e salvou incontáveis vidas.',
+    ],
+  },
+  {
+    id: 3,
+    title: 'A Corrida Maluca pelo Meridiano',
+    emoji: '🏁',
+    color: '#CE93D8',
+    period: '1884',
+    location: 'Washington, D.C.',
+    coordinates: '38.9°N, 77.0°W',
+    paragraphs: [
+      'Antes de 1884, era uma **bagunça total**. Cada país tinha seu próprio meridiano principal! A França usava Paris, o Brasil usava o Rio de Janeiro, os russos usavam São Petersburgo. Os mapas não batiam uns com os outros!',
+      'Imagine tentar combinar um encontro com alguém de outro país quando vocês nem concordam em que horas são ou onde fica o "centro" do mapa. Era exatamente essa a vida no século XIX.',
+      'Em outubro de 1884, delegados de **25 países** se reuniram em Washington, D.C., para a **Conferência Internacional do Meridiano**. A missão: escolher UM meridiano principal para o mundo todo.',
+      'A votação foi dramática! Greenwich venceu com **22 votos a favor**, 1 contra (República Dominicana) e 2 abstenções (França e Brasil). A França ficou tão irritada que continuou usando o **Meridiano de Paris** até **1911**!',
+      'O mais irônico? O Meridiano de Greenwich não passa realmente pelo telescópio original do Observatório Real. Com a tecnologia GPS moderna, descobrimos que o verdadeiro meridiano está a cerca de **102 metros** a leste do monumento. Mas ninguém quer mudar a linha agora!',
+    ],
+  },
+  {
+    id: 4,
+    title: 'O Dia em que o Mundo Ganhou Fusos',
+    emoji: '🚂',
+    color: '#81C784',
+    period: '1883-1884',
+    location: 'América do Norte',
+    coordinates: '41.9°N, 87.6°W',
+    paragraphs: [
+      'Antes dos fusos horários, cada cidade definia seu próprio horário pelo Sol. Quando era meio-dia em São Paulo, eram **12:06 em Santos** e **11:49 no Rio**. Cada estação de trem tinha um relógio diferente!',
+      'Nos Estados Unidos, havia mais de **300 horários locais** diferentes. As companhias ferroviárias ficavam loucas tentando fazer horários de trens. Acidentes aconteciam porque dois trens achavam que era sua vez de usar os trilhos!',
+      'Um engenheiro canadense chamado **Sandford Fleming** perdeu um trem na Irlanda em 1876 porque o horário impresso dizia "p.m." quando deveria ser "a.m.". Furioso, ele dedicou anos a criar um sistema de **24 fusos horários** baseados em intervalos de 15° de longitude.',
+      'Em **18 de novembro de 1883**, as ferrovias americanas adotaram o novo sistema. Esse dia ficou conhecido como o **"Dia dos Dois Meio-Dias"**, porque em muitas cidades os relógios tiveram que ser ajustados e o meio-dia aconteceu duas vezes!',
+      'A ideia se espalhou pelo mundo. O Brasil adotou fusos horários em **1913**, dividindo o país em 4 fusos diferentes. Hoje temos 4 fusos (de UTC-2 a UTC-5), sendo UTC-3 o horário oficial de Brasília.',
+    ],
+  },
+];
+
+export default stories;

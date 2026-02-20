@@ -1,0 +1,260 @@
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.lessonCard {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+:global([data-theme="light"]) .lessonCard {
+  background: rgba(255, 255, 255, 0.8);
+  border-color: rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+}
+
+.progress {
+  height: 4px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.progressFill {
+  height: 100%;
+  border-radius: 0 2px 2px 0;
+  transition: width 0.4s ease;
+}
+
+.lessonHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+:global([data-theme="light"]) .lessonHeader {
+  border-bottom-color: rgba(0, 0, 0, 0.05);
+}
+
+.lessonEmoji {
+  font-size: 2rem;
+}
+
+.lessonTitle {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0;
+  color: #fff;
+}
+
+:global([data-theme="light"]) .lessonTitle {
+  color: #1a1a2e;
+}
+
+.sectionCount {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.4);
+  margin: 0.15rem 0 0;
+}
+
+:global([data-theme="light"]) .sectionCount {
+  color: rgba(0, 0, 0, 0.35);
+}
+
+.content {
+  padding: 1.5rem;
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sectionIcon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.sectionTitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 1rem;
+  text-align: center;
+}
+
+:global([data-theme="light"]) .sectionTitle {
+  color: #1a1a2e;
+}
+
+.text {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 560px;
+  width: 100%;
+}
+
+.text strong {
+  color: #4FC3F7;
+  font-weight: 700;
+}
+
+:global([data-theme="light"]) .text {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+:global([data-theme="light"]) .text strong {
+  color: #1565C0;
+}
+
+.diagramWrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.diagramHint {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.35);
+  margin-top: 0.5rem;
+}
+
+:global([data-theme="light"]) .diagramHint {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1.5rem 1.5rem;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.7rem 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #4FC3F7, #1976D2);
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(79, 195, 247, 0.3);
+}
+
+.btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.btnSecondary {
+  padding: 0.7rem 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btnSecondary:hover:not(:disabled) {
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #fff;
+}
+
+.btnSecondary:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+:global([data-theme="light"]) .btnSecondary {
+  border-color: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.03);
+  color: rgba(0, 0, 0, 0.55);
+}
+
+/* Completed state */
+.completedCard {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  animation: fadeIn 0.5s ease;
+}
+
+:global([data-theme="light"]) .completedCard {
+  background: rgba(255, 255, 255, 0.8);
+  border-color: rgba(0, 0, 0, 0.06);
+}
+
+.completedEmoji {
+  font-size: 3rem;
+  animation: bounce 0.6s ease;
+}
+
+@keyframes bounce {
+  0% { transform: scale(0); }
+  50% { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+
+.completedCard h2 {
+  color: #fff;
+  margin: 0.5rem 0;
+}
+
+:global([data-theme="light"]) .completedCard h2 {
+  color: #1a1a2e;
+}
+
+.xpGain {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #81C784;
+  margin: 0.5rem 0;
+}
+
+.completedCard p {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+:global([data-theme="light"]) .completedCard p {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.completedCard strong {
+  color: #4FC3F7;
+}
+
+.completedBtns {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.notFound {
+  text-align: center;
+  padding: 3rem;
+  color: rgba(255, 255, 255, 0.6);
+}

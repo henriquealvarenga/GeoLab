@@ -1,0 +1,186 @@
+.container {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.backBtn {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.85rem;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+}
+
+.backBtn:hover { color: #fff; }
+
+:global([data-theme="light"]) .backBtn { color: rgba(0, 0, 0, 0.4); }
+:global([data-theme="light"]) .backBtn:hover { color: #1a1a2e; }
+
+.title {
+  font-size: 1.5rem;
+  color: #fff;
+  margin: 0.25rem 0;
+}
+
+:global([data-theme="light"]) .title { color: #1a1a2e; }
+
+.subtitle {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.85rem;
+}
+
+:global([data-theme="light"]) .subtitle { color: rgba(0, 0, 0, 0.35); }
+
+.clockGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.clockCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1.25rem 1rem;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: transform 0.2s;
+}
+
+.clockCard:hover {
+  transform: translateY(-4px);
+}
+
+.clockCard.day {
+  background: linear-gradient(135deg, rgba(255, 235, 59, 0.06), rgba(255, 183, 77, 0.04));
+}
+
+.clockCard.night {
+  background: linear-gradient(135deg, rgba(92, 107, 192, 0.08), rgba(30, 30, 80, 0.15));
+}
+
+:global([data-theme="light"]) .clockCard.day {
+  background: linear-gradient(135deg, rgba(255, 235, 59, 0.15), rgba(255, 183, 77, 0.08));
+  border-color: rgba(0, 0, 0, 0.06);
+}
+
+:global([data-theme="light"]) .clockCard.night {
+  background: linear-gradient(135deg, rgba(92, 107, 192, 0.08), rgba(49, 27, 146, 0.05));
+  border-color: rgba(0, 0, 0, 0.06);
+}
+
+.cityInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cityEmoji { font-size: 1.2rem; }
+
+.cityName {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #fff;
+  display: block;
+}
+
+:global([data-theme="light"]) .cityName { color: #1a1a2e; }
+
+.cityCountry {
+  font-size: 0.65rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+:global([data-theme="light"]) .cityCountry { color: rgba(0, 0, 0, 0.35); }
+
+.digitalTime {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #4FC3F7;
+  font-variant-numeric: tabular-nums;
+}
+
+.dayLabel {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+:global([data-theme="light"]) .dayLabel { color: rgba(0, 0, 0, 0.35); }
+
+.dayNight { font-size: 0.75rem; }
+
+/* City selector */
+.citySelector {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  padding: 1.25rem;
+}
+
+:global([data-theme="light"]) .citySelector {
+  background: rgba(255, 255, 255, 0.6);
+  border-color: rgba(0, 0, 0, 0.06);
+}
+
+.selectorTitle {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0 0 0.75rem;
+  font-weight: 600;
+}
+
+:global([data-theme="light"]) .selectorTitle { color: rgba(0, 0, 0, 0.4); }
+
+.cityChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.chip {
+  padding: 0.35rem 0.7rem;
+  font-size: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.03);
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.chip:hover {
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.chip.chipActive {
+  border-color: #4FC3F7;
+  background: rgba(79, 195, 247, 0.12);
+  color: #4FC3F7;
+}
+
+:global([data-theme="light"]) .chip {
+  border-color: rgba(0, 0, 0, 0.08);
+  background: rgba(0, 0, 0, 0.02);
+  color: rgba(0, 0, 0, 0.5);
+}
+
+:global([data-theme="light"]) .chip.chipActive {
+  border-color: #1976D2;
+  background: rgba(25, 118, 210, 0.08);
+  color: #1565C0;
+}

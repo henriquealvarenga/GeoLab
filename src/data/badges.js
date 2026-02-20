@@ -1,0 +1,88 @@
+const badges = [
+  {
+    id: 'first_lesson',
+    name: 'Primeiro Passo',
+    emoji: '👣',
+    description: 'Completou sua primeira lição',
+    condition: (player) => player.lessonsCompleted.length >= 1,
+  },
+  {
+    id: 'latitude_master',
+    name: 'Mestre da Latitude',
+    emoji: '🌍',
+    description: 'Completou a lição de Latitude',
+    condition: (player) => player.lessonsCompleted.includes(1),
+  },
+  {
+    id: 'longitude_master',
+    name: 'Mestre da Longitude',
+    emoji: '🌐',
+    description: 'Completou a lição de Longitude',
+    condition: (player) => player.lessonsCompleted.includes(2),
+  },
+  {
+    id: 'time_lord',
+    name: 'Senhor do Tempo',
+    emoji: '⏰',
+    description: 'Completou a lição de Fusos Horários',
+    condition: (player) => player.lessonsCompleted.includes(3),
+  },
+  {
+    id: 'navigator',
+    name: 'Navegador',
+    emoji: '📍',
+    description: 'Completou a lição de Coordenadas',
+    condition: (player) => player.lessonsCompleted.includes(4),
+  },
+  {
+    id: 'all_lessons',
+    name: 'Explorador Completo',
+    emoji: '🎓',
+    description: 'Completou todas as 4 lições',
+    condition: (player) => player.lessonsCompleted.length >= 4,
+  },
+  {
+    id: 'quiz_ace',
+    name: 'Gênio dos Quizzes',
+    emoji: '🧠',
+    description: 'Acertou todas em um quiz',
+    condition: (player) => player.perfectQuizzes >= 1,
+  },
+  {
+    id: 'coordinate_hunter',
+    name: 'Caçador de Coordenadas',
+    emoji: '🎯',
+    description: 'Fez 500+ pontos no jogo',
+    condition: (player) => player.gameHighScore >= 500,
+  },
+  {
+    id: 'story_reader',
+    name: 'Historiador',
+    emoji: '📚',
+    description: 'Leu todas as histórias épicas',
+    condition: (player) => player.storiesRead.length >= 4,
+  },
+  {
+    id: 'master_quiz',
+    name: 'Mestre da Geografia',
+    emoji: '🏆',
+    description: 'Passou no Quiz Mestre',
+    condition: (player) => player.masterQuizPassed === true,
+  },
+  {
+    id: 'xp_500',
+    name: 'Aventureiro',
+    emoji: '⭐',
+    description: 'Alcançou 500 XP',
+    condition: (player) => player.xp >= 500,
+  },
+  {
+    id: 'xp_1000',
+    name: 'Lenda',
+    emoji: '🌟',
+    description: 'Alcançou 1000 XP',
+    condition: (player) => player.xp >= 1000,
+  },
+];
+
+export default badges;

@@ -1,0 +1,224 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem 1rem 3rem;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.readyCard {
+  text-align: center;
+  padding: 2.5rem 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+}
+
+:global([data-theme="light"]) .readyCard {
+  background: rgba(255, 255, 255, 0.8);
+  border-color: rgba(0, 0, 0, 0.06);
+}
+
+.readyEmoji { font-size: 3rem; }
+
+.readyCard h1 {
+  color: #fff;
+  margin: 0.5rem 0;
+}
+
+:global([data-theme="light"]) .readyCard h1 { color: #1a1a2e; }
+
+.readyDesc {
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 400px;
+  margin: 0.5rem auto;
+  line-height: 1.5;
+}
+
+:global([data-theme="light"]) .readyDesc { color: rgba(0, 0, 0, 0.5); }
+
+.readyRules {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  margin: 1.5rem 0;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+:global([data-theme="light"]) .readyRules { color: rgba(0, 0, 0, 0.4); }
+
+.readyRules p { margin: 0; }
+
+.highScore {
+  color: #FFD54F;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.finalScore {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #4FC3F7;
+}
+
+.finalLabel {
+  color: rgba(255, 255, 255, 0.4);
+  margin-top: -0.5rem;
+}
+
+.highScoreMsg {
+  color: #FFD54F;
+  font-weight: 600;
+}
+
+/* HUD */
+.hud {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.hudItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 10px;
+  flex: 1;
+  min-width: 80px;
+}
+
+:global([data-theme="light"]) .hudItem {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.hudLabel {
+  font-size: 0.6rem;
+  color: rgba(255, 255, 255, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+:global([data-theme="light"]) .hudLabel { color: rgba(0, 0, 0, 0.35); }
+
+.hudValue {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #4FC3F7;
+}
+
+.hudValue.warning { color: #EF5350; }
+
+.hudTarget {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #FFB74D;
+}
+
+/* Hint */
+.hint {
+  text-align: center;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 0.75rem;
+}
+
+:global([data-theme="light"]) .hint { color: rgba(0, 0, 0, 0.6); }
+
+.hint strong { color: #FFB74D; }
+
+.hintCoord {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+:global([data-theme="light"]) .hintCoord { color: rgba(0, 0, 0, 0.3); }
+
+/* Map */
+.mapWrap {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  margin-bottom: 1rem;
+}
+
+.map {
+  width: 100%;
+  display: block;
+}
+
+/* Round result */
+.roundResult {
+  text-align: center;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 12px;
+  animation: fadeIn 0.3s ease;
+}
+
+:global([data-theme="light"]) .roundResult {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.resultDist {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0 0 0.3rem;
+}
+
+:global([data-theme="light"]) .resultDist { color: rgba(0, 0, 0, 0.7); }
+
+.resultPoints {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #81C784;
+  margin: 0 0 1rem;
+}
+
+.btn {
+  padding: 0.75rem 2rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #4FC3F7, #1976D2);
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(79, 195, 247, 0.3);
+}
+
+.btnSecondary {
+  padding: 0.75rem 2rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: all 0.2s;
+}
+
+.btnSecondary:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+:global([data-theme="light"]) .btnSecondary {
+  border-color: rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.55);
+  background: rgba(0, 0, 0, 0.03);
+}
