@@ -1,0 +1,205 @@
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.backBtn {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.85rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.backBtn:hover { color: #fff; }
+:global([data-theme="light"]) .backBtn { color: rgba(0, 0, 0, 0.4); }
+
+.card {
+  text-align: center;
+  padding: 2.5rem 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+}
+
+:global([data-theme="light"]) .card {
+  background: rgba(255, 255, 255, 0.8);
+  border-color: rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+}
+
+.globe {
+  font-size: 3rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 0.5rem 0 0.25rem;
+  background: linear-gradient(135deg, #4FC3F7, #CE93D8, #FFB74D);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.tagline {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+}
+
+:global([data-theme="light"]) .tagline { color: rgba(0, 0, 0, 0.4); }
+
+.divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.06);
+  margin: 1.5rem 0;
+}
+
+:global([data-theme="light"]) .divider { background: rgba(0, 0, 0, 0.06); }
+
+.section { margin-bottom: 0.5rem; }
+
+.sectionTitle {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.35);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0 0 1rem;
+}
+
+:global([data-theme="light"]) .sectionTitle { color: rgba(0, 0, 0, 0.3); }
+
+.creators {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.creator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.creatorEmoji { font-size: 2.5rem; }
+
+.creatorName {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+:global([data-theme="light"]) .creatorName { color: #1a1a2e; }
+
+.creatorRole {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+:global([data-theme="light"]) .creatorRole { color: rgba(0, 0, 0, 0.35); }
+
+.amp {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.2);
+}
+
+:global([data-theme="light"]) .amp { color: rgba(0, 0, 0, 0.15); }
+
+.techList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.tech {
+  padding: 0.3rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+:global([data-theme="light"]) .tech {
+  border-color: rgba(0, 0, 0, 0.08);
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.techHighlight {
+  padding: 0.3rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border: 1px solid rgba(206, 147, 216, 0.3);
+  border-radius: 20px;
+  color: #CE93D8;
+  background: rgba(206, 147, 216, 0.08);
+}
+
+.claudeNote {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.45);
+  line-height: 1.5;
+  max-width: 380px;
+  margin: 0 auto;
+}
+
+.claudeNote strong { color: #CE93D8; }
+
+:global([data-theme="light"]) .claudeNote { color: rgba(0, 0, 0, 0.4); }
+:global([data-theme="light"]) .claudeNote strong { color: #7B1FA2; }
+
+.link {
+  display: inline-block;
+  padding: 0.6rem 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #4FC3F7;
+  border: 1px solid rgba(79, 195, 247, 0.25);
+  border-radius: 12px;
+  background: rgba(79, 195, 247, 0.06);
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.link:hover {
+  border-color: #4FC3F7;
+  background: rgba(79, 195, 247, 0.12);
+  transform: translateY(-2px);
+}
+
+:global([data-theme="light"]) .link {
+  color: #1565C0;
+  border-color: rgba(21, 101, 192, 0.2);
+  background: rgba(21, 101, 192, 0.04);
+}
+
+.footer {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.25);
+  margin: 1.5rem 0 0;
+}
+
+:global([data-theme="light"]) .footer { color: rgba(0, 0, 0, 0.2); }

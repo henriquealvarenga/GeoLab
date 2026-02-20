@@ -24,6 +24,9 @@ export default function Navbar({ onToggleTheme }) {
       </div>
 
       <div className={styles.right}>
+        <button className={styles.iconBtn} onClick={() => navigate('/about')} title="Sobre">
+          ℹ️
+        </button>
         <button className={styles.iconBtn} onClick={onToggleTheme} title="Alternar tema">
           {player.theme === 'dark' ? '☀️' : '🌙'}
         </button>

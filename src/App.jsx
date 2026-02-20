@@ -12,6 +12,7 @@ import CoordinateHunter from './components/Game/CoordinateHunter';
 import Stories from './components/Stories/Stories';
 import MasterQuiz from './components/MasterQuiz/MasterQuiz';
 import Profile from './components/Profile/Profile';
+import About from './components/About/About';
 import './App.css';
 
 function AppRoutes() {
@@ -34,6 +35,7 @@ function AppRoutes() {
           <Route path="/stories" element={player ? <Stories /> : <Navigate to="/" replace />} />
           <Route path="/master-quiz" element={player ? <MasterQuiz /> : <Navigate to="/" replace />} />
           <Route path="/profile" element={player ? <Profile /> : <Navigate to="/" replace />} />
+          <Route path="/about" element={player ? <About /> : <Navigate to="/" replace />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>
